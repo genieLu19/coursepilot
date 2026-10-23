@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CoursePilot — AI-ассистент по вашим учебным материалам">
+  <title>CoursePilot · Учись с опорой на знания</title>
+  <link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script>
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="CoursePilot, главная"><span class="brand-icon">C<span>↗</span></span>CoursePilot</a>
+  <div class="label">ТВОЁ ПРОСТРАНСТВО</div>
+  <label for="course">Курс</label><select id="course"><option value="ml-foundations">Основы машинного обучения</option></select>
+  <nav aria-label="Разделы">
+    <button class="nav active" data-tab="chat"><span>✧</span> AI-ассистент</button>
+    <button class="nav" data-tab="materials"><span>▤</span> Материалы курса</button>
+    <button class="nav" data-tab="quiz"><span>✓</span> Проверка знаний</button>
+    <button class="nav" data-tab="plan"><span>↗</span> План и прогресс</button>
+  </nav>
+  <div class="sidebar-bottom"><span class="status-dot"></span><span id="status">Проверяем подключение…</span>
+  <p>Ответы с источниками.<br>Обучение в твоём темпе.</p></div>
+</aside>
+<main>
+  <header><span id="breadcrumb">ТВОЙ ПАРТНЁР В ОБУЧЕНИИ</span><span class="pill">AI + твои материалы</span></header>
+  <div id="notice" role="status" hidden></div>
+  <section id="chat" class="panel active">
+    <div class="hero"><div class="eyebrow">МЕНЬШЕ ПОИСКА. БОЛЬШЕ ПОНИМАНИЯ.</div>
+      <h1>Сложные темы.<br><span>Понятные ответы.</span></h1>
+      <p>Спроси о материалах курса, разбери трудную тему<br class="desktop"> или проверь, что уже знаешь. Начнём с твоей цели.</p>
+    </div>
+    <div class="suggestions">
+      <button data-prompt="Объясни, чем переобучение отличается от недообучения. Приведи пример из материалов."><span>01 / РАЗОБРАТЬСЯ</span><strong>Объясни сложную тему</strong><small>Понятно, по шагам, с источниками ↗</small></button>
+      <button data-prompt="Создай тест по метрикам классификации"><span>02 / ПРОВЕРИТЬ СЕБЯ</span><strong>Что я уже знаю?</strong><small>Три вопроса и разбор ответов ↗</small></button>
+      <button data-prompt="Составь план изучения машинного обучения по материалам курса. У меня 30 минут в день."><span>03 / ДВИГАТЬСЯ ДАЛЬШЕ</span><strong>Составь мой план</strong><small>С учётом цели и прогресса ↗</small></button>
+    </div>
+    <div id="messages" aria-live="polite"></div>
+    <form id="chat-form" class="composer"><label class="sr-only" for="message">Твой вопрос</label>
+      <textarea id="message" maxlength="4000" rows="2" placeholder="Что хочешь понять сегодня?" required></textarea>
+      <div class="composer-bottom"><span>✦ Отвечает по материалам выбранного курса</span><button class="send" type="submit" aria-label="Отправить вопрос">↑</button></div>
+    </form>
+    <p class="footnote">AI может ошибаться. Проверяй важные выводы по источникам.</p>
+  </section>
+  <section id="materials" class="panel">
+    <div class="eyebrow">БАЗА ТВОИХ ЗНАНИЙ</div><h2>Материалы курса</h2><p class="intro">Добавь конспекты и лекции, на которые будет опираться ассистент.</p>
+    <div class="card"><h3>Начни с готового курса</h3><p>Шесть авторских разделов по машинному обучению: от подготовки данных до RAG.</p><button id="seed" class="primary">Добавить курс по ML</button><small>При первой загрузке создаются эмбеддинги через OpenAI API.</small></div>
+    <form id="upload-form" class="card"><h3>Загрузить свой материал</h3>
+      <label for="course-id">ID курса</label><input id="course-id" value="ml-foundations" pattern="[a-z0-9_-]{1,80}" required>
+      <label for="document">PDF, Markdown или TXT · до 10 МБ · UTF-8</label><input id="document" type="file" accept=".pdf,.md,.txt" required>
+      <p>Текст отправляется в OpenAI для создания эмбеддингов; найденные фрагменты — для ответов. Загружай материалы, которые разрешено использовать.</p>
+      <button class="primary" type="submit">Загрузить и проиндексировать</button>
+    </form><div id="course-list"></div>
+  </section>
+  <section id="quiz" class="panel"><div class="eyebrow">ЗАКРЕПИ МАТЕРИАЛ</div><h2>Проверка знаний</h2>
+    <p class="intro">Три вопроса по твоей теме. После ответа — объяснение и источник.</p>
+    <form id="quiz-form" class="inline-form"><label class="sr-only" for="quiz-topic">Тема теста</label><input id="quiz-topic" placeholder="Например, метрики классификации" required minlength="2" maxlength="500"><button class="primary">Создать тест</button></form>
+    <div id="quiz-content" class="empty-state">Выбери тему или попроси ассистента подготовить тест в диалоге.</div>
+  </section>
+  <section id="plan" class="panel"><div class="eyebrow">ШАГ ЗА ШАГОМ</div><h2>Твоя траектория</h2>
+    <p class="intro">План по материалам курса и результатам твоих проверок знаний.</p>
+    <div id="progress" class="stats"></div>
+    <form id="plan-form" class="card"><label for="goal">Чему хочешь научиться?</label><input id="goal" placeholder="Разобраться в оценке моделей" required minlength="2" maxlength="500"><label for="minutes">Минут в день</label><input id="minutes" type="number" min="10" max="180" value="30" required><button class="primary">Построить план</button></form>
+    <div id="plan-content"></div><h3>Результаты проверок</h3><div id="results"></div>
+  </section>
+</main>
+</body></html>

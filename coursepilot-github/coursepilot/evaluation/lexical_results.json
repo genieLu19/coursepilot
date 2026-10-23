@@ -1,0 +1,588 @@
+{
+  "mode": "lexical",
+  "answerable_questions": 24,
+  "corpus_chunks": 24,
+  "hit_rate_at_5": 1,
+  "mrr_at_5": 0.925,
+  "median_latency_ms": 4.100549966096878,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "embedding_tokens": 0
+  },
+  "scope": "Retrieval only; one annotated relevant section per question. No answer-quality claim.",
+  "results": [
+    {
+      "question": "Для чего нужна тестовая выборка?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "01_data.md",
+          "section": "Обучающая, валидационная и тестовая выборки"
+        },
+        {
+          "source": "02_generalization.md",
+          "section": "Кросс-валидация"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Baseline и воспроизводимость"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Логистическая регрессия"
+        },
+        {
+          "source": "05_text.md",
+          "section": "TF-IDF"
+        }
+      ]
+    },
+    {
+      "question": "Как разделять данные, если у одного пациента несколько наблюдений?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "01_data.md",
+          "section": "Обучающая, валидационная и тестовая выборки"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Дерево решений и случайный лес"
+        },
+        {
+          "source": "02_generalization.md",
+          "section": "Кросс-валидация"
+        },
+        {
+          "source": "03_metrics.md",
+          "section": "Accuracy"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Baseline и воспроизводимость"
+        }
+      ]
+    },
+    {
+      "question": "Почему нельзя подбирать гиперпараметры по тесту?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "01_data.md",
+          "section": "Обучающая, валидационная и тестовая выборки"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Логистическая регрессия"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Пропуски и масштабирование"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Как работает RAG"
+        },
+        {
+          "source": "05_text.md",
+          "section": "TF-IDF"
+        }
+      ]
+    },
+    {
+      "question": "Что такое утечка данных?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "01_data.md",
+          "section": "Утечка данных"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Логистическая регрессия"
+        },
+        {
+          "source": "02_generalization.md",
+          "section": "Переобучение"
+        },
+        {
+          "source": "02_generalization.md",
+          "section": "Кросс-валидация"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Baseline и воспроизводимость"
+        }
+      ]
+    },
+    {
+      "question": "На какой выборке оценивают параметры StandardScaler?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "01_data.md",
+          "section": "Пропуски и масштабирование"
+        },
+        {
+          "source": "05_text.md",
+          "section": "TF-IDF"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Разбиение документов"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Baseline и воспроизводимость"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Утечка данных"
+        }
+      ]
+    },
+    {
+      "question": "Как заполнить числовые пропуски?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "01_data.md",
+          "section": "Пропуски и масштабирование"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Как работает RAG"
+        },
+        {
+          "source": "05_text.md",
+          "section": "Эмбеддинги"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Логистическая регрессия"
+        },
+        {
+          "source": "05_text.md",
+          "section": "TF-IDF"
+        }
+      ]
+    },
+    {
+      "question": "Почему модель запоминает обучение и плохо работает на новых данных?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "02_generalization.md",
+          "section": "Переобучение"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Утечка данных"
+        },
+        {
+          "source": "02_generalization.md",
+          "section": "Недообучение"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Обучающая, валидационная и тестовая выборки"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Как работает RAG"
+        }
+      ]
+    },
+    {
+      "question": "Что делать, если качество низкое и на обучении, и на валидации?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "02_generalization.md",
+          "section": "Недообучение"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Пропуски и масштабирование"
+        },
+        {
+          "source": "02_generalization.md",
+          "section": "Переобучение"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Утечка данных"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Обучающая, валидационная и тестовая выборки"
+        }
+      ]
+    },
+    {
+      "question": "Чем L1 отличается от L2?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "02_generalization.md",
+          "section": "Регуляризация"
+        },
+        {
+          "source": "05_text.md",
+          "section": "TF-IDF"
+        },
+        {
+          "source": "05_text.md",
+          "section": "BM25"
+        },
+        {
+          "source": "05_text.md",
+          "section": "Эмбеддинги"
+        },
+        {
+          "source": "03_metrics.md",
+          "section": "Precision и Recall"
+        }
+      ]
+    },
+    {
+      "question": "Что означает уменьшение C в логистической регрессии?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "02_generalization.md",
+          "section": "Регуляризация"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Логистическая регрессия"
+        },
+        {
+          "source": "05_text.md",
+          "section": "BM25"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Утечка данных"
+        },
+        {
+          "source": "05_text.md",
+          "section": "TF-IDF"
+        }
+      ]
+    },
+    {
+      "question": "Как устроена k-fold кросс-валидация?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "02_generalization.md",
+          "section": "Кросс-валидация"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Оценка качества RAG"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Гибридный поиск и RRF"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Утечка данных"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Как работает RAG"
+        }
+      ]
+    },
+    {
+      "question": "Что означают TP FP FN TN?",
+      "first_relevant_rank": 2,
+      "retrieved": [
+        {
+          "source": "03_metrics.md",
+          "section": "Accuracy"
+        },
+        {
+          "source": "03_metrics.md",
+          "section": "Матрица ошибок"
+        },
+        {
+          "source": "03_metrics.md",
+          "section": "Precision и Recall"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Логистическая регрессия"
+        }
+      ]
+    },
+    {
+      "question": "Почему accuracy может обманывать при дисбалансе классов?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "03_metrics.md",
+          "section": "Accuracy"
+        },
+        {
+          "source": "03_metrics.md",
+          "section": "Порог решения и ROC-AUC"
+        },
+        {
+          "source": "03_metrics.md",
+          "section": "F1-score"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Обучающая, валидационная и тестовая выборки"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Галлюцинации и недостоверные источники"
+        }
+      ]
+    },
+    {
+      "question": "Как рассчитать precision и recall?",
+      "first_relevant_rank": 2,
+      "retrieved": [
+        {
+          "source": "03_metrics.md",
+          "section": "F1-score"
+        },
+        {
+          "source": "03_metrics.md",
+          "section": "Precision и Recall"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Как работает RAG"
+        },
+        {
+          "source": "03_metrics.md",
+          "section": "Accuracy"
+        },
+        {
+          "source": "05_text.md",
+          "section": "Эмбеддинги"
+        }
+      ]
+    },
+    {
+      "question": "Что такое macro F1?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "03_metrics.md",
+          "section": "F1-score"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Логистическая регрессия"
+        }
+      ]
+    },
+    {
+      "question": "Как снижение порога влияет на recall?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "03_metrics.md",
+          "section": "Порог решения и ROC-AUC"
+        },
+        {
+          "source": "03_metrics.md",
+          "section": "F1-score"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Пропуски и масштабирование"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Как работает RAG"
+        },
+        {
+          "source": "03_metrics.md",
+          "section": "Precision и Recall"
+        }
+      ]
+    },
+    {
+      "question": "Для чего используют логистическую регрессию?",
+      "first_relevant_rank": 5,
+      "retrieved": [
+        {
+          "source": "03_metrics.md",
+          "section": "Порог решения и ROC-AUC"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Baseline и воспроизводимость"
+        },
+        {
+          "source": "02_generalization.md",
+          "section": "Кросс-валидация"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Обучающая, валидационная и тестовая выборки"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Логистическая регрессия"
+        }
+      ]
+    },
+    {
+      "question": "Почему случайный лес устойчивее одного дерева?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "04_models.md",
+          "section": "Дерево решений и случайный лес"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Обучающая, валидационная и тестовая выборки"
+        }
+      ]
+    },
+    {
+      "question": "Зачем нужен baseline?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "04_models.md",
+          "section": "Baseline и воспроизводимость"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Логистическая регрессия"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Дерево решений и случайный лес"
+        }
+      ]
+    },
+    {
+      "question": "Как TF-IDF взвешивает слова?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "05_text.md",
+          "section": "TF-IDF"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Логистическая регрессия"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Как работает RAG"
+        },
+        {
+          "source": "05_text.md",
+          "section": "Эмбеддинги"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Пропуски и масштабирование"
+        }
+      ]
+    },
+    {
+      "question": "Является ли косинусное сходство вероятностью правильного ответа?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "05_text.md",
+          "section": "Эмбеддинги"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Оценка качества RAG"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Галлюцинации и недостоверные источники"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Как работает RAG"
+        }
+      ]
+    },
+    {
+      "question": "Как BM25 учитывает длину документа?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "05_text.md",
+          "section": "BM25"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Гибридный поиск и RRF"
+        },
+        {
+          "source": "03_metrics.md",
+          "section": "F1-score"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Оценка качества RAG"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Как работает RAG"
+        }
+      ]
+    },
+    {
+      "question": "Что делает Reciprocal Rank Fusion?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "06_rag.md",
+          "section": "Гибридный поиск и RRF"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Логистическая регрессия"
+        }
+      ]
+    },
+    {
+      "question": "Зачем нужен reranking и какие у него затраты?",
+      "first_relevant_rank": 1,
+      "retrieved": [
+        {
+          "source": "06_rag.md",
+          "section": "Reranking"
+        },
+        {
+          "source": "01_data.md",
+          "section": "Пропуски и масштабирование"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Baseline и воспроизводимость"
+        },
+        {
+          "source": "04_models.md",
+          "section": "Дерево решений и случайный лес"
+        },
+        {
+          "source": "06_rag.md",
+          "section": "Галлюцинации и недостоверные источники"
+        }
+      ]
+    }
+  ]
+}
